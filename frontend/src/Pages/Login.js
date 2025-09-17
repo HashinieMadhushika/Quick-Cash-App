@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 // Note: You'll need to add these images to your project
-import logo from '../Images/3.jpeg';
-import googleIcon from '../Images/2.jpeg';
-import backgroundImage from '../Images/1.jpeg';
+import logo from '../Images/3.jpeg'; // Placeholder for logo
+import googleIcon from '../Images/2.jpeg'; // Placeholder for Google icon
+import backgroundImage from '../Images/1.jpeg'; // Placeholder for background
 
-const Login = ({ onSwitchToSignup }) => {
-  const [email, setEmail] = useState('');
+const Login = () => {
+   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Login attempted with:', { email, password });
+    navigate('/dashboard'); // Now this works
   };
 
   const handleGoogleLogin = () => {
@@ -21,14 +23,10 @@ const Login = ({ onSwitchToSignup }) => {
     console.log('Google login attempted');
   };
 
-  // Typing animation style without cursor
-  const typingAnimation = {
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
-    animation: 'typing 3.5s steps(9, end)'
-  };
-
   return (
+
+    
+
     <div className="login-container">
       {/* Left side - Brand section with background image */}
       <div 
@@ -39,13 +37,13 @@ const Login = ({ onSwitchToSignup }) => {
           <div className="brand-content">
             <div className="selected-works">Selected Works</div>
             <div className="sign-up-join">
-              <span className="sign-up" onClick={onSwitchToSignup}>Sign Up</span>
+              <span className="sign-up">Sign Up</span>
               <span className="join-us">Join Us</span>
             </div>
             <div className="brand-logo">
               <img src={logo} alt="USOCIAL Logo" />
             </div>
-            <div className="brand-name" style={typingAnimation}>Quick Cash</div>
+            <div className="brand-name" >Quick Cash</div>
           </div>
           <div className="footer-left">
             <div className="andrew-us">Andrew.us</div>
@@ -97,7 +95,14 @@ const Login = ({ onSwitchToSignup }) => {
             </button>
             
             <div className="signup-prompt">
-              Don't have an account? <span className="signup-link" onClick={onSwitchToSignup}>Sign up</span>
+              Don't have an account?{" "}
+              <span
+                className="signup-link"
+                style={{ cursor: "pointer", color: "#007bff" }}
+                onClick={() => navigate('/signup')}
+              >
+                Sign up
+              </span>
             </div>
           </form>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Using the same CSS file
 
 // Note: You'll need to add these images to your project
@@ -15,6 +16,8 @@ const Signup = ({ onSwitchToLogin }) => {
     phoneNumber: ''
   });
 
+   const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -23,10 +26,13 @@ const Signup = ({ onSwitchToLogin }) => {
     }));
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle signup logic here
     console.log('Signup attempted with:', formData);
+    navigate('/dashboard');
   };
 
   const handleGoogleSignup = () => {
