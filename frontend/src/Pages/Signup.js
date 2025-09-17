@@ -23,11 +23,29 @@ const Signup = ({ onSwitchToLogin }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle signup logic here
-    console.log('Signup attempted with:', formData);
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("http://localhost:5000/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      alert("Signup successful!");
+      console.log(data);
+      onSwitchToLogin(); // redirect to login page after signup
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    console.error("Error during signup:", error);
+  }
+};
+
 
   const handleGoogleSignup = () => {
     // Handle Google signup logic here
