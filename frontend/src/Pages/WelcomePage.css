@@ -1,0 +1,72 @@
+/* Container */
+.welcome-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3c654c, #154642); /* Green gradient */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 400px;
+  height: auto;
+}
+
+/* Title */
+.welcome-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Subtitle */
+.welcome-subtitle {
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Login Button */
+.btn-login {
+  background-color: #ffffff;
+  color: #11998e;
+}
+
+.btn-login:hover {
+  background-color: #f0f0f0;
+}
+
+/* Signup Button */
+.btn-signup {
+  background-color: #11998e;
+  color: #ffffff;
+}
+
+.btn-signup:hover {
+  background-color: #0f7a6f;
+}
