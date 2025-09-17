@@ -32,7 +32,6 @@ const Signup = ({ onSwitchToLogin }) => {
     e.preventDefault();
     // Handle signup logic here
     console.log('Signup attempted with:', formData);
-    navigate('/dashboard');
   };
 
   const handleGoogleSignup = () => {

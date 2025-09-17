@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 // Note: You'll need to add these images to your project
-import logo from '../Images/3.jpeg'; // Placeholder for logo
-import googleIcon from '../Images/2.jpeg'; // Placeholder for Google icon
-import backgroundImage from '../Images/1.jpeg'; // Placeholder for background
+import logo from '../Images/3.jpeg';
+import googleIcon from '../Images/2.jpeg';
+import backgroundImage from '../Images/1.jpeg';
 
 const Login = () => {
    const [email, setEmail] = useState('');

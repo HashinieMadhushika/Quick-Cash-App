@@ -111,7 +111,7 @@
 /* Right side - Login form */
 .login-section {
   flex: 1;
-  background-color: #fff;
+  background-color: #7b998c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,13 +127,13 @@
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #000;
+  color: #ffffff;
 }
 
 .welcome-text {
   font-size: 16px;
   margin-bottom: 40px;
-  color: #666;
+  color: #f7f7f7;
 }
 
 .login-form {
@@ -148,7 +148,7 @@
   display: block;
   font-size: 14px;
   margin-bottom: 8px;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -176,7 +176,7 @@
 .login-button {
   width: 100%;
   padding: 15px;
-  background-color: #000;
+  background-color: #243f3d;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -207,16 +207,16 @@
 
 .divider span {
   padding: 0 15px;
-  color: #888;
+  color: #ffffff;
   font-size: 14px;
 }
 
 .google-login-button {
   width: 100%;
   padding: 15px;
-  background-color: #fff;
+  background-color: #86ba8e;
   color: #333;
-  border: 1px solid #ddd;
+  border: 1px solid #86ba8e;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 500;
@@ -241,11 +241,11 @@
 .signup-prompt {
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #ffffff;
 }
 
 .signup-link {
-  color: #000;
+  color: #fffcfc;
   font-weight: 500;
   cursor: pointer;
   text-decoration: underline;
