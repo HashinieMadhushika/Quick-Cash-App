@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 
 // Note: You'll need to add these images to your project
-import logo from '../Images/3.jpeg';
+import logo from '../Images/logo.png';
 import googleIcon from '../Images/2.jpeg';
 import backgroundImage from '../Images/1.jpeg';
 
